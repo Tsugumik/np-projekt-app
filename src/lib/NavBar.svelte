@@ -7,7 +7,8 @@
         <h1>Article App</h1>
         <h2>Projekt z narzędzi programistycznych</h2>
     </div>
-    <div class="flex-1 flex justify-end items-center">
+    <div class="flex-1 flex justify-end items-center gap-2">
+        <NavButton href="/">H</NavButton>
         <NavButton href="/create">+</NavButton>
     </div>
 </nav>

@@ -3,6 +3,11 @@
     import '../app.css';
 </script>
 
-<NavBar />
 
-<slot />
+
+<div class="container mx-auto">
+    <NavBar />
+    <div class="px-2">
+        <slot />
+    </div>
+</div>

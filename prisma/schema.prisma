@@ -10,5 +10,5 @@ datasource db {
 model Article {
   id Int @id @default(autoincrement())
   title String
-  content String
+  content String @db.VarChar(500)
 }
