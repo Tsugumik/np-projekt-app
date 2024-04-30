@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         nodejs '22.0.0'
-        docker 'latest'
+        dockerTool 'latest'
     }
 
     environment {
