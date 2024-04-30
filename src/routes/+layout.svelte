@@ -3,7 +3,9 @@
     import '../app.css';
 </script>
 
-
+<svelte:head>
+    <title>Article App</title>
+</svelte:head>
 
 <div class="container mx-auto">
     <NavBar />

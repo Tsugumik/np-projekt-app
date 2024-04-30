@@ -3,8 +3,8 @@
     export let article: Article;
 </script>
 
-<div class="shadow-black shadow rounded-xl p-2">
-    <a href="/article/{article.id}">
+<div class="shadow-black shadow rounded-xl p-2 my-2">
+    <a href="/article/{article.id}/read">
         <h2 class="border-b-gray-800 border-b-2 p-2 font-bold">{article.title}</h2>
     </a>
     <p class="p-2">{article.content}</p>
