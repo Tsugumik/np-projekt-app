@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs '22.0.0'
+        docker 'latest'
+    }
+
     environment {
         DOCKER_IMAGE_NAME = 'np-projekt-app'
         MYSQL_ROOT_PASSWORD = credentials('mysql-root-password')
