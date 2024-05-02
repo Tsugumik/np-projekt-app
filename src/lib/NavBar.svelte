@@ -9,6 +9,6 @@
     </div>
     <div class="flex-1 flex justify-end items-center gap-2">
         <NavButton href="/">H</NavButton>
-        <NavButton href="/create">+</NavButton>
+        <NavButton href="/article/create">+</NavButton>
     </div>
 </nav>
