@@ -3,16 +3,14 @@ services:
     image: np-projekt-app
     restart: on-failure
     build:
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     ports:
-      - 5173:5173
-      - 24678:24678
-    volumes:
-      - ./np-projekt-app:/usr/src/app
-      - /usr/src/app/node_modules
+      - "3100:3100"
     depends_on:
       db:
         condition: service_healthy
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
   db:
     image: mysql
     restart: on-failure

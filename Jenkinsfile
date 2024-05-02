@@ -1,6 +1,6 @@
 pipeline {
     agent any
-
+    
     tools {
         nodejs '22.0.0'
         dockerTool 'latest'
@@ -42,21 +42,17 @@ pipeline {
                 }
             }
         }
-
-        stage('Deploy') {
-            steps {
-                script {
-                    sh 'docker compose up -d'
-                }
-            }
-        }
     }
 
     post {
-        always {
+        success {
             script {
-                sh 'docker compose down'
+                sh 'docker compose up -d'
             }
+        }
+
+        failure {
+            echo 'Pipeline failed, not deploying application.'
         }
     }
 }
