@@ -2,6 +2,7 @@ FROM node:21
 
 ENV NODE_ENV production
 ENV PORT 3100
+ENV ORIGIN http://myserv.local
 
 WORKDIR /usr/src/app
 
