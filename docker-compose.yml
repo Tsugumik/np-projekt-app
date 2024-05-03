@@ -1,7 +1,7 @@
 services:
   np-projekt-app:
     image: np-projekt-app
-    restart: on-failure
+    restart: always
     build:
       dockerfile: Dockerfile
     ports:
@@ -13,7 +13,7 @@ services:
       - DATABASE_URL=${DATABASE_URL}
   db:
     image: mysql
-    restart: on-failure
+    restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       - MYSQL_DATABASE=np_app_db
